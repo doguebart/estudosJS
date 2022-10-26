@@ -1,4 +1,4 @@
-console.log(`Trabalhando com listas`)
+console.log(`Trabalhando com condicionais`)
 
 // Criando uma lista
 const listaDestinos = new Array(
@@ -7,15 +7,22 @@ const listaDestinos = new Array(
     `Bahia`,
 )
 
-// Usamos push para adicionar um item na lista
-// Alterando um elemento da lista, e não a lista
-listaDestinos.push(`Rio Grande do Sul`)
+const idadeComprador = 16
+console.log('Destinos possiveis')
 console.log(listaDestinos)
 
-// (0 - Posição do elemento na lista | 1 - quantidade de elementos para deletar)
-listaDestinos.splice(0, 1)
+if (idadeComprador >= 18) {
+    console.log('Comprador maior de idade')
+    listaDestinos.splice(0, 1) // Removendo item
+} else {
+    console.log('Comprador menor de idade, não posso vender')
+}
 
 console.log(listaDestinos)
 
-// Exibindo apenas um item da lista com indice
-console.log(listaDestinos[0], listaDestinos[2])
+// Operadores lógicos
+console.log(idadeComprador > 18)
+console.log(idadeComprador < 18)
+console.log(idadeComprador >= 18)
+console.log(idadeComprador <= 18)
+console.log(idadeComprador == 18)
