@@ -1,0 +1,21 @@
+// Criando a classe ContaCorrente
+export class ContaCorrente {
+    agencia;
+    _saldo = 0; // Atributo privado
+
+    // Criando um metodo/comportamento de saque
+    sacar(valor) {
+        if (this._saldo >= valor) {
+            this._saldo -= valor // Sacando
+            return valor // Sem o return a função chamada não retorna nada
+        }
+    }
+
+    depositar(valor) {
+        if (valor < 0) {
+            return // Técnica early return, faz as verificações antes
+        }
+
+        this._saldo += valor
+    }
+}
